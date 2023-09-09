@@ -1,0 +1,92 @@
+.container,
+.add-excel-container,
+.info-container,
+.input-container {
+    border: 2px solid #555555;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.info-container {
+    text-align: center;
+    display: flex;
+}
+
+.form-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.submit-button {
+    font-size: 20px;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: green;
+    border: 1px solid transparent;
+    color: white;
+    transition: all .5s ease;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 4rem);
+    height: 800px;
+}
+
+.add-excel-container {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.add-excel-container:hover {
+    background-color: green;
+    color: white;
+    transition: all .5s ease;
+    border: 1px solid transparent;
+}
+
+.input-container {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.min-val-input {
+    padding: .5rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 16px;
+}
+
+.info-container {
+    width: calc(100% - 4rem - 200px);
+    height: calc(100% - 4rem);
+    overflow: auto;
+}
+
+.info-container pre {
+    padding: 1rem;
+}
+
+.add-file {
+    display: none;
+}
+
+
