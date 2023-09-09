@@ -1,19 +1,25 @@
 <div class="container">
 
   <div class="input-container">
-    <form class="form-class" (ngSubmit)="onFormSubmit()">
-      
-      <div class="add-excel-container" (click)="file.click()">
-        <input class="add-file" type="file" accept="*" #file (change)="onFileChange($event)">
-        <h4>Add Excel</h4>
+    <form class="form-class" [formGroup]="form" (ngSubmit)="onFormSubmit()">
+      <div class="add-excel-container" (click)="fileInput.click()">
+        <input class="add-file" type="file" accept="*" #fileInput (change)="onFileChange($event)"
+          formControlName="excelFile">
+        <div>Add Excel</div>
       </div>
 
+      <mat-radio-group aria-label="Select an option" formControlName="selectedOption">
+        <mat-radio-button [value]="1">Mai mic</mat-radio-button>
+        <mat-radio-button [value]="2">Mai mare</mat-radio-button>
+      </mat-radio-group>
 
-
-      <input class="min-val-input" type="number" placeholder="Val. minima" [(ngModel)]="valAnaliza" name="valAnaliza">
-      <button class="submit-button" type="submit">Search</button>
+      <input class="min-val-input" type="number" placeholder="Val. minima" formControlName="valAnaliza">
+      <button mat-raised-button color="accent" type="submit">Search</button>
     </form>
 
+    <button mat-raised-button color="primary" class="export-excel" (click)="exportExcel()">
+      Export excel
+    </button>
   </div>
 
   <div class="info-container">

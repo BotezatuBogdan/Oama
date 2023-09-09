@@ -50,6 +50,7 @@
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
+    padding: 1rem 0;
 }
 
 .add-excel-container:hover {
@@ -89,4 +90,6 @@
     display: none;
 }
 
-
+.export-excel {
+    margin: 1rem;
+}
